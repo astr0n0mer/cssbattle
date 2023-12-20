@@ -64,9 +64,11 @@ window.onload = () => {
   //   const searchParams = new URLSearchParams(window.location.search);
   //   const source = searchParams.get("s");
   const splittedUrl = window.location.href.split("s=");
-  const source = decodeURIComponent(splittedUrl[splittedUrl.length - 1]);
-  sourceCodeInput.value = source;
-  refreshMinifiedCode();
+  if (splittedUrl.length > 1) {
+    const source = decodeURIComponent(splittedUrl[1]);
+    sourceCodeInput.value = source;
+    refreshMinifiedCode();
+  }
 };
 
 [sourceCodeInput, removeClosingTagsInput].forEach((element) =>
