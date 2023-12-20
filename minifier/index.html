@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://cssbattle.dev/images/logo-square.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>CSS Battle minifier</title>
+  </head>
+  <body>
+    <main class="hero">
+      <h1 class="hero__title">CSS Battle minifier</h1>
+      <form class="form">
+        <textarea
+          name="source"
+          id="source"
+          cols="50"
+          rows="30"
+          placeholder="source code"
+          class="js-source"
+        ></textarea>
+        <textarea
+          name="minified"
+          id="minified"
+          cols="50"
+          rows="30"
+          readonly
+          class="js-minified"
+          placeholder="minified code"
+        ></textarea>
+        <input
+          type="checkbox"
+          name="remove_closing_tags"
+          id="remove_closing_tags"
+          class="js-remove_closing_tags"
+          checked
+        />
+        <label for="remove_closing_tags">Remove closing tags</label>
+        <input type="button" value="Copy" class="js-copy" />
+      </form>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
